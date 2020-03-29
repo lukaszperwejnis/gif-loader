@@ -11,7 +11,6 @@ export class GifController extends Controller {
     }
 
     public async getMultiple(req: Request, res: Response, next: NextFunction) {
-        console.log(req.query);
         try {
             const docs: Gif[] = await this.gifService.getGifs(req.query);
             return this.ok(res, docs);

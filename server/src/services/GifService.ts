@@ -10,7 +10,6 @@ export class GifService {
     async getGifs(options: RetrieveGifsOptions): Promise<Gif[]> {
         const giphyData: Gif[] = await this.giphyService.getMultiple(options);
         const pixabayData: Gif[] = await this.pixabayService.getMultiple(options);
-        console.log({giphyData, pixabayData});
         return [
             ...giphyData,
             ...pixabayData
