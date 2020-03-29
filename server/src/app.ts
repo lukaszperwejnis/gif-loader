@@ -1,3 +1,4 @@
+require('dotenv').config();
 import * as express from "express";
 
 export default class App {

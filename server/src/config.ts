@@ -1,5 +1,5 @@
 const config = {
-    port: 3010
+    port: process.env.PORT
 };
 
 export default config;
