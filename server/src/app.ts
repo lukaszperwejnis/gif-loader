@@ -1,5 +1,9 @@
 require('dotenv').config();
 import * as express from "express";
+import * as bodyParser from 'body-parser';
+import * as morgan from 'morgan';
+import {errorMiddleware} from "./middlewares/errorMiddleware";
+import {GifRoutes} from "./routes/gifRoutes";
 
 export default class App {
     public app: express.Application;
@@ -7,6 +11,19 @@ export default class App {
     constructor(port) {
         this.app = express();
         this.port = port;
+
+        this.initMiddlewares();
+        this.initRoutes();
+    }
+
+    private initMiddlewares(): void {
+        this.app.use(bodyParser.json());
+        this.app.use(morgan('dev'));
+        this.app.use(errorMiddleware);
+    }
+
+    private initRoutes(): void {
+        this.app.use('/gifs', GifRoutes);
     }
 
     public listen() {
