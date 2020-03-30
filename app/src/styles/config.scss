@@ -4,6 +4,7 @@ $fontFamily-controls: "Assistant", sans-serif;
 $fontSize-tiny: 0.75rem;
 $fontSize-small: 0.875rem;
 $fontSize-normal: 1rem;
+$fontSize-large: 1.25rem;
 
 @function spacing($n) {
   @return $n * 8px;
@@ -17,6 +18,7 @@ $spacing-big: spacing(4);
 
 $color-alto: #D3D3D3;
 $color-curiousBlue: #3498DB;
+$color-punch: #DB3437;
 
 $opacity-disabled: 0.5;
 

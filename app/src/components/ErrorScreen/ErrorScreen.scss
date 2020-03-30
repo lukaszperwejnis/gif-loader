@@ -1,0 +1,21 @@
+@import "src/styles/config";
+@import "src/styles/mixins";
+
+.error-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-punch;
+  font-size: $fontSize-small;
+
+  @include forTablet {
+    font-size: $fontSize-normal;
+  }
+
+  @include forDesktop {
+    font-size: $fontSize-large;
+  }
+}
