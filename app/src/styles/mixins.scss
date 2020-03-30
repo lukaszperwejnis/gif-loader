@@ -1,0 +1,7 @@
+$for-phone: "screen and (max-width: 44.9375rem)"; // < 720
+$for-tablet-only: "screen and (min-width: 45rem) and (max-width: 74.9375rem)"; // > 720 < 1199
+$for-desktop-up: "screen and (min-width: 74rem)"; // > 1184
+
+@mixin atPhone { @media #{$for-phone} { @content } }
+@mixin forTablet { @media #{$for-tablet-only} { @content } }
+@mixin forDesktop { @media #{$for-desktop-up} { @content } }
