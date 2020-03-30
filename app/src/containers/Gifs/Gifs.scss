@@ -1,3 +1,46 @@
-.gifs {
+@import "src/styles/config";
+@import "src/styles/mixins";
 
+.gifs__content {
+  text-align: center;
+  padding: $spacing-small;
+
+  @include forDesktop {
+    padding: $spacing-normal;
+  }
+}
+
+.gifs__filters {
+  padding-top: $spacing-large;
+  margin-bottom: $spacing-large;
+}
+
+.gifs__tiles-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gifs__tile {
+  display: inline-block;
+  margin: {
+    top: $spacing-small;
+    bottom: $spacing-small;
+  }
+
+  @include forTablet {
+    margin: {
+      top: $spacing-normal;
+      bottom: $spacing-normal;
+      left: $spacing-normal;
+    }
+  }
+
+  @include forDesktop {
+    margin: {
+      top: $spacing-large;
+      bottom: $spacing-large;
+      left: $spacing-large;
+    }
+  }
 }
