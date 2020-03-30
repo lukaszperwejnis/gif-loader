@@ -1,0 +1,26 @@
+@import "src/styles/config";
+@import "src/styles/mixins";
+
+.search-field {
+  font-family: $fontFamily-controls;
+  border-radius: 4px;
+  border: 1px solid $color-alto;
+  height: 30px;
+  width: 100px;
+  box-sizing: border-box;
+  padding: 0 $spacing-normal;
+  outline: none;
+  font-size: $fontSize-normal;
+
+  @include forTablet {
+    width: 150px;
+  }
+
+  @include forDesktop {
+    width: 300px;
+  }
+
+  &:disabled {
+    opacity: $opacity-disabled;
+  }
+}
