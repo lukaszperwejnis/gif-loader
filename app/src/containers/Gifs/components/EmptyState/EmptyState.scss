@@ -1,0 +1,17 @@
+@import "src/styles/config";
+@import "src/styles/mixins";
+
+.empty-state {
+  font-size: $fontSize-tiny;
+  padding: $spacing-small;
+
+  @include forTablet {
+    font-size: $fontSize-small;
+
+  }
+
+  @include forDesktop {
+    font-size: $fontSize-normal;
+    padding: $spacing-normal;
+  }
+}

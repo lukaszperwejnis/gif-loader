@@ -1,5 +1,7 @@
 @import "src/styles/config";
 
 .page {
+  position: relative;
+  margin: $spacing-normal;
   box-shadow: $block-shadow;
 }

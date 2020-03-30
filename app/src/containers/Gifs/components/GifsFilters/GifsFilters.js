@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {SearchField} from "../../../../components/SearchField/SearchField";
+import {SearchField} from "../../../../components";
 import './GifsFilters.scss';
 
 export const GifsFilters = ({className, filters, onFiltersChange}) => {
