@@ -19,14 +19,14 @@ module.exports = {
                 }
             },
             {
-                test: /\.s(a|c)ss$/,
+                test: /\.(scss|css)$/,
                 loader: [
-                    isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+                    isProduction() ? MiniCssExtractPlugin.loader : 'style-loader',
                     'css-loader',
                     {
                         loader: 'sass-loader',
                         options: {
-                            sourceMap: !isProduction
+                            sourceMap: !isProduction()
                         }
                     }
                 ]
@@ -39,8 +39,8 @@ module.exports = {
         }),
         new DotenvWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: isProduction ? '[name].[hash].css' : '[name].css',
-            chunkFilename: isProduction ? '[id].[hash].css' : '[id].css'
+            filename: isProduction() ? '[name].[hash].css' : '[name].css',
+            chunkFilename: isProduction() ? '[id].[hash].css' : '[id].css'
         })
     ],
     output: {
@@ -51,6 +51,5 @@ module.exports = {
 };
 
 function isProduction() {
-    console.log(process.env.NODE_ENV);
     return process.env.NODE_ENV === "production"
 }

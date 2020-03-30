@@ -1,0 +1,20 @@
+$fontFamily-content: "Assistant", sans-serif;
+$fontFamily-controls: "Assistant", sans-serif;
+
+$fontSize-tiny: 0.75rem;
+$fontSize-small: 0.875rem;
+$fontSize-normal: 1rem;
+
+@function spacing($n) {
+  @return $n * 8px;
+}
+
+$spacing-tiny: spacing(.5);
+$spacing-small: spacing(1);
+$spacing-normal: spacing(2);
+$spacing-large: spacing(3);
+$spacing-big: spacing(4);
+
+$opacity-disabled: 0.5;
+
+$block-shadow: 0 4px 20px 0 rgba(37,38,94,0.1);
