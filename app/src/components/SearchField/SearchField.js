@@ -6,7 +6,6 @@ import './SearchField.scss';
 
 export const SearchField = ({className, name, onChange, value, ...otherProps}) => {
     const [phrase, setPhrase] = useState(value);
-    //const emitPhraseChange = useRef(debounce(setPhrase, 250)).current;
     const emitChange = useRef(debounce(onChange, 250)).current;
 
     const onPhraseChange = (event) => {
