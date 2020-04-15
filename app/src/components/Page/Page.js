@@ -1,5 +1,8 @@
 import React from 'react';
-import {compose, classNames} from 'react-compose'
+import classNames from 'classnames';
 import './Page.scss';
 
-export const Page = compose(classNames("page"))("div");
+export const Page = ({className, ...otherProps}) => {
+    return <div className={classNames('page', className)} {...otherProps}/>;
+};
+

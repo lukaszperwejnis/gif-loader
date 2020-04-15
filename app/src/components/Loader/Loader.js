@@ -1,4 +1,7 @@
-import {classNames, compose} from "react-compose";
+import React from "react";
+import classNames from 'classnames';
 import './Loader.scss';
 
-export const Loader = compose(classNames("loader"))("div");
+export const Loader = ({className, ...otherProps}) => {
+    return <div className={classNames('loader', className)} {...otherProps} />;
+};
