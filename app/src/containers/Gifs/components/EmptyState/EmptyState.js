@@ -1,5 +1,7 @@
 import React from 'react';
-import {compose, classNames} from "react-compose";
+import classNames from 'classnames';
 import './EmptyState.scss';
 
-export const EmptyState = compose(classNames("empty-state"))('div');
+export const EmptyState = ({className, ...otherProps}) => {
+    return <div className={classNames('empty-state', className)} {...otherProps} />;
+};

@@ -11,7 +11,7 @@ import {Loader} from "../../components/Loader/Loader";
 import './Gifs.scss';
 
 export const GifsComponent = React.memo(
-    function GifsComponent({isLoading, filters, onFiltersChange, data, ...otherProps}) {
+    function GifsComponent({isLoading, filters, onFiltersChange, data}) {
         if (isLoading) {
             return <Loader/>;
         }
